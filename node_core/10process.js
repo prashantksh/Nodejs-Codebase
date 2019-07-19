@@ -1,5 +1,7 @@
 const process = require('process');
 
+process;
+
 console.log('Sync first');
 console.log('Memory used:', process.memoryUsage());
 console.log('Uptime:', process.uptime());

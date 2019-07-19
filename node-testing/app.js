@@ -1,5 +1,5 @@
 exports.greet = function() {
-  return 'Hello1';
+  return 'Hello';
 };
 
 exports.tell = function(name) {

@@ -9,8 +9,10 @@ if (cluster.isMaster) {
   console.log('loading for the child');
   http
     .createServer(function(req, res) {
-      res.writeHead(200);
-      res.end(`This is from ${process.pid}`);
+      setTimeout(() => {
+        res.writeHead(200);
+        res.end(`This is from ${process.pid}`);
+      }, 2000);
     })
     .listen(8000);
 }

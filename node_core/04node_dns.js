@@ -40,7 +40,7 @@ let resolveNameServer = url => {
 
 let driver = async () => {
   try {
-    const ip = await lookupSite('jjkjkkjsssodododdoo.com');
+    const ip = await lookupSite('google.com');
     const resolve_result = await resolveSite('google.com', 'TXT');
     const ns = await resolveNameServer('google.com');
 

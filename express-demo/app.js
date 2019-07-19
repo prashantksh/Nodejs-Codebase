@@ -9,6 +9,7 @@ var cookieSession = require('cookie-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const testRouter = require('./routes/test');
 
 var app = express();
 
@@ -53,6 +54,7 @@ app.use(myLogger);
 app.use(requestTime);
 app.use('/', indexRouter);
 app.use('/api', usersRouter);
+app.use('/test', testRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

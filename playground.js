@@ -1,19 +1,35 @@
-const EventEmitter = require('events').EventEmitter;
+const process = require('process');
 
-//create a publisher
+process.env.UV_THREADPOOL_SIZE = 8;
 
-const publisher = new EventEmitter();
+console.log('Sync first');
+console.log('Memory used:', process.memoryUsage());
+console.log('Uptime:', process.uptime());
+console.log('Working directory', process.cwd());
 
-publisher.addListener('start', startListener);
-publisher.addListener('end', endListener);
+setTimeout(() => {
+  console.log('Async 1');
+}, 2000);
+setTimeout(() => {
+  console.log('Async 1');
+}, 2000);
+setTimeout(() => {
+  console.log('Async 1');
+}, 2000);
+setTimeout(() => {
+  console.log('Async 1');
+}, 2000);
+setTimeout(() => {
+  console.log('Async 1');
+}, 2000);
 
-publisher.emit('start', new Date());
-publisher.emit('end', new Date());
+process.nextTick(() => {
+  console.log('Next Tick');
+});
 
-function startListener(timestamp) {
-  console.log(`Start occured at ${timestamp}`);
-}
+console.log('Sync last');
 
-function endListener(ts) {
-  console.log(`End occured at ${ts}`);
-}
+setTimeout(() => {
+  console.log('Async 2');
+  console.log('Uptime Async:', process.uptime());
+}, 2000);

@@ -1,5 +1,5 @@
-const PoS = require('./d2events_extending');
-const Bank = require('./d2events_listener');
+const PoS = require('./12events_extending');
+const Bank = require('./14events_listener');
 
 const pointOfSale = new PoS();
 const bankInstance = new Bank();
