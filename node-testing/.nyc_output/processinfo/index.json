@@ -1,0 +1,1 @@
+{"processes":{"89c62ef1-0491-4680-ad9f-db2bef183500":{"parent":null,"children":["e8fa14c9-eeeb-41d9-a8c6-64c5461165d8"]},"e8fa14c9-eeeb-41d9-a8c6-64c5461165d8":{"parent":"89c62ef1-0491-4680-ad9f-db2bef183500","children":[]}},"files":{"/Users/vivekanandpv/JavaScriptProjects/basics/node-core/app.js":["e8fa14c9-eeeb-41d9-a8c6-64c5461165d8"]},"externalIds":{}}
